@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 
 export const StoreContext = createContext();
 const StoreContextProvider = ({children}) => {
-    const url = "http://localhost:4003" ; 
+    // const url = "http://localhost:4003" ; 
+    const url = "https://tinytrack.onrender.com" ; 
     const [isAuthenticated , setIsAuthenticated] = useState(false);
     const navigate = useNavigate();
     
@@ -16,11 +17,7 @@ const StoreContextProvider = ({children}) => {
         }
     },[]);
 
-    // useEffect(() => {
-    //     if (isAuthenticated) {
-    //       navigate("/dashboard");
-    //     }
-    //   }, [isAuthenticated, navigate]);
+  
 
 
 
